@@ -2,12 +2,13 @@
 #include <string.h>
 // Infix to postfix
 
-const int MAX_N = 1005;
-char stk[MAX_N];
-char infix[MAX_N];
-char postfix[MAX_N];
+const int MAX_N = 100005;
 
 int main(int argc, char* argv[]) {
+
+    char stk[MAX_N];
+    char infix[MAX_N];
+    char postfix[MAX_N];
 
     // Read infix expression
     scanf("%s", infix);
