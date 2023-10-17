@@ -1,0 +1,25 @@
+name: GitHub Classroom Workflow
+
+on:
+  workflow_dispatch:
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  build:
+    name: dry_test
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v2
+      - name: make
+        run: make clean && make -k
+      - name: Run Test
+        if: always()
+        run: |
+          /bin/rm -rf ${PWD}/test
+          /bin/curl -o ${PWD}/test.tar.gz https://raw.githubusercontent.com/2023-DS/hw_test/main/hw1_test.tar.gz
+          /bin/curl -o ${PWD}/test.sh https://raw.githubusercontent.com/2023-DS/hw_test/main/test.sh
+          /bin/chmod a+x ${PWD}/test.sh && ${PWD}/test.sh
