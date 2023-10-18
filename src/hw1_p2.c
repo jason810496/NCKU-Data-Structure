@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-const int MAX_N = 10005;
+const int MAX_N = 1000005;
 
 int par[MAX_N];
 int ht[MAX_N];
@@ -35,10 +35,6 @@ void Union(int a, int b)
 
 }
 
-int Same(int a, int b)
-{
-    return Find(a) == Find(b);
-}
 
 int main(int argc, char *argv[])
 {
