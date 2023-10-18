@@ -65,7 +65,7 @@ int main(int argc, char *argv[])
             {
             case 'f':
                 scanf("%d" ,&a);
-                printf("%d",Find(a) );
+                printf("%d\n",Find(a) );
                 break;
             case 'u':
                 scanf("%d%d" ,&a,&b);
@@ -75,19 +75,16 @@ int main(int argc, char *argv[])
                 scanf("%d%d" ,&a,&b);
                 int res = Same(a,b);
                 if( res ){
-                    printf("true");
+                    printf("true\n");
                 }
                 else{
-                    printf("false");
+                    printf("false\n");
                 }
                 break;
             default:
                 break;
             }
 
-            if( q!=-1 ){
-                printf("\n");
-            }
         }
     }
     return 0;
