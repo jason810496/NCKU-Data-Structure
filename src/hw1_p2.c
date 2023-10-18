@@ -40,18 +40,19 @@ int main(int argc, char *argv[])
 {
     int t;
     scanf("%d", &t);
+    char oper[6];
 
     while (t--)
     {
         int n, q;
-        scanf("%d%d", &n, &q);
+        scanf("%d %d", &n, &q);
 
-        for(int i=0;i<=n+1;i++){
+        for(int i=0;i<=n;i++){
             par[i] = i;
             ht[i] = 0;
         }
 
-        char oper[6];
+        
         while (q--)
         {
             int a, b;
@@ -64,13 +65,14 @@ int main(int argc, char *argv[])
                 printf("%d\n",Find(a) );
                 break;
             case 'u':
-                scanf("%d%d" ,&a,&b);
+                scanf("%d %d" ,&a,&b);
                 Union(a,b);
                 break;
             case 's':
-                scanf("%d%d" ,&a,&b);
-                int res = Same(a,b);
-                if( res ){
+                scanf("%d %d" ,&a,&b);
+                a = Find(a);
+                b = Find(b);
+                if( a==b ){
                     printf("true\n");
                 }
                 else{
