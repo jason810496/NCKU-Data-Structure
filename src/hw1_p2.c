@@ -2,10 +2,8 @@
 #include <string.h>
 #include <stdlib.h>
 
-const int MAX_N = 1000005;
-
-int par[MAX_N];
-int ht[MAX_N];
+int par[100005];
+int ht[100005];
 
 int Find(int x)
 {   
