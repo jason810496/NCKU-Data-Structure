@@ -14,4 +14,4 @@ Source code for NCKU Data Structure 2023 Fall.
 - P2 :
     - [x] Disjoint Set
 - P3 :
-    - [x] P3 : Minimum Spanning Tree
+    - [x] Minimum Spanning Tree
