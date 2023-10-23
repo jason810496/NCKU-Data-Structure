@@ -2,6 +2,7 @@
 
 <pre>
 
+    
 Source code for NCKU Data Structure 2023 Fall.
 
 </pre>
@@ -10,5 +11,7 @@ Source code for NCKU Data Structure 2023 Fall.
 - P1 : 
     - [x] Infix to postfix
     - [x] Postfix to infix
-- [x] P2 : Disjoint Set
-- [x] P3 : Minimum Spanning Tree
+- P2 :
+    - [x] Disjoint Set
+- P3 :
+    - [x] P3 : Minimum Spanning Tree
