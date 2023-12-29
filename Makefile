@@ -17,6 +17,17 @@ all: check $(targets)
 check:
 	mkdir -p $(ODIR)
 
+# for debug
+# make hw2_p1 IN=1 to run test/hw2_p1/input_01.txt 
+hw2_p1:all
+	./$(ODIR)/hw2_p1.output 1 < test/hw2_p1/input_0${IN}.txt
+
+# for debug
+# make hw2_p2 IN=1 to run test/hw2_p2/input_01.txt
+hw2_p2:all
+	./$(ODIR)/hw2_p2.output 2 < test/hw2_p2/input_0${IN}.txt
+
+
 .PHONY: check all clean
 
 clean:
